@@ -1,0 +1,6 @@
+broker:
+  name: jms_broker
+  url: tcp://localhost:61616
+  auth:
+    username: user
+    password: pass
