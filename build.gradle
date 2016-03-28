@@ -17,8 +17,8 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter")
-    compile("org.apache.activemq:activemq-spring:5.13.2")
-    compile("org.apache.activemq:activemq-broker:5.13.2")
+    compile("org.apache.activemq:activemq-spring:5.12.3")
+    compile("org.apache.activemq:activemq-broker:5.12.3")
 }
 
 sourceCompatibility = 1.8

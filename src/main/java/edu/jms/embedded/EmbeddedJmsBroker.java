@@ -30,7 +30,7 @@ public class EmbeddedJmsBroker {
     @Value("${broker.auth.password}")
     private String password;
 
-    @Bean
+    @Bean(initMethod = "start", destroyMethod = "stop")
     public BrokerService brokerService() throws Exception {
         BrokerService broker = new BrokerService();
         broker.setBrokerName(name);
@@ -44,7 +44,6 @@ public class EmbeddedJmsBroker {
 
         broker.addShutdownHook(new SpringContextHook());
 
-        broker.start();
 
         return broker;
     }
